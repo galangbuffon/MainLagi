@@ -1,0 +1,47 @@
+.header-content {
+    text-align: center;
+    padding: 20px;
+    color: white;
+}
+
+.header-title {
+    font-size: calc(24px + 2vw);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-block-end: 10px;
+    text-transform: uppercase;
+}
+
+.header-subtitle {
+    font-size: calc(14px + 1vw);
+    line-height: 1.4;
+    opacity: 0.9;
+}
+
+/* Media queries untuk penyesuaian lebih lanjut */
+@media screen and (max-width: 320px) {
+    .header-title {
+        font-size: 24px;
+    }
+    .header-subtitle {
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .header-title {
+        font-size: 40px;
+    }
+    .header-subtitle {
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .header-title {
+        font-size: 48px;
+    }
+    .header-subtitle {
+        font-size: 24px;
+    }
+}

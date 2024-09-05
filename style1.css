@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --text-color: #333;
+    --bg-color: #f4f4f4;
+    --card-bg: #ffffff;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 0;
+    inline-size: 100%;
+    overflow-x: hidden;
+}
+
+.container {
+    inline-size: 100%;
+    max-inline-size: 1200px;
+    padding: 0 20px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+/* Header */
+.program-header {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.program-header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-block-end: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.program-header small {
+    font-size: 1.2rem;
+    opacity: 0.8;
+}
+
+/* Sections */
+section {
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin-block-end: 30px;
+    transition: transform 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-block-end: 20px;
+    padding-block-end: 10px;
+    border-block-end: 3px solid var(--secondary-color);
+    display: inline-block;
+}
+
+/* Grids */
+.info-grid, .curriculum-grid, .benefits-grid, .highlight-container {
+    display: grid;
+    gap: 20px;
+}
+
+/* Items dalam grid */
+.info-item, .curriculum-item, .benefit-item, .highlight-item {
+    background-color: var(--bg-color);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.info-item:hover, .curriculum-item:hover, .benefit-item:hover, .highlight-item:hover {
+    background-color: var(--card-bg);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.info-item i, .benefit-item i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-block-end: 15px;
+}
+
+h3 {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    margin-block-end: 10px;
+}
+
+p {
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+/* Responsive design */
+@media (min-width: 768px) {
+    .info-grid, .curriculum-grid, .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .highlight-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .info-grid, .curriculum-grid, .benefits-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+img {
+    max-inline-size: 100%;
+    block-size: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Tambahan untuk efek hover pada gambar */
+img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
